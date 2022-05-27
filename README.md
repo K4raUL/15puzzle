@@ -3,4 +3,4 @@
 
 Use keyboard ↑←↓→ or WASD to move cells adjacent to empty cell.
 
-# Checking if initial board can be solved
+### Checking if initial board can be solved
