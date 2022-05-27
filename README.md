@@ -1,5 +1,5 @@
 # 15puzzle
-15 puzzle game (any N*N board)
+15 puzzle game (any N*N board)  
 Published at https://k4raul.github.io/15puzzle/
 
 Final goal is to recover original board state (empty tile is always at bottom right).   
