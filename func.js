@@ -79,46 +79,6 @@ function drawNumbers()
     }
 }
 
-function moveUp()
-{
-    if (zerow == N-1) return;
-    board[zerow*N + zercol] = board[(zerow+1)*N + zercol];
-    zerow++;
-    board[zerow*N + zercol] = 0;
-
-    redraw();
-}
-
-function moveLeft()
-{
-    if (zercol == N-1) return;
-    board[zerow*N + zercol] = board[zerow*N + zercol + 1];
-    zercol++;
-    board[zerow*N + zercol] = 0;
-
-    redraw();
-}
-
-function moveDown()
-{
-    if (zerow == 0) return;
-    board[zerow*N + zercol] = board[(zerow-1)*N + zercol];
-    zerow--;
-    board[zerow*N + zercol] = 0;
-
-    redraw();
-}
-
-function moveRight()
-{
-    if (zercol == 0) return;
-    board[zerow*N + zercol] = board[zerow*N + zercol - 1];
-    zercol--;
-    board[zerow*N + zercol] = 0;
-
-    redraw();
-}
-
 function redraw()
 {
     drawNumbers();
@@ -195,4 +155,44 @@ function isSolved()
 function solve()
 {
 
+}
+
+function moveUp()
+{
+    if (zerow == N-1) return;
+    board[zerow*N + zercol] = board[(zerow+1)*N + zercol];
+    zerow++;
+    board[zerow*N + zercol] = 0;
+
+    redraw();
+}
+
+function moveLeft()
+{
+    if (zercol == N-1) return;
+    board[zerow*N + zercol] = board[zerow*N + zercol + 1];
+    zercol++;
+    board[zerow*N + zercol] = 0;
+
+    redraw();
+}
+
+function moveDown()
+{
+    if (zerow == 0) return;
+    board[zerow*N + zercol] = board[(zerow-1)*N + zercol];
+    zerow--;
+    board[zerow*N + zercol] = 0;
+
+    redraw();
+}
+
+function moveRight()
+{
+    if (zercol == 0) return;
+    board[zerow*N + zercol] = board[zerow*N + zercol - 1];
+    zercol--;
+    board[zerow*N + zercol] = 0;
+
+    redraw();
 }
