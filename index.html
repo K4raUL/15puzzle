@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>15 puzzle</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="func.js"></script>
+</head>
+<body onload="init()">
+    <div class="draw">  
+        <canvas id="cnv" onclick="init()"></canvas>
+    </div>
+    <div style="text-align: center; margin-top: 3vh;">
+        <button disabled onclick="speedDown()"><<</button>
+        <button onclick="solve()"> SOLVE </button>
+        <button disabled onclick="speedUp()">>></button>
+        
+        <button style="margin-left: 20vh;" onclick="init()"> NEW </button>
+        <input type="number" id="Nval" min="3" max="100" value="4">
+    </div>
+</body>
+</html>
