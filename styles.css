@@ -28,7 +28,7 @@ canvas {
 	display: inline-block;
 }
 
-input, button {
+input, button, span {
    font-size: 3vh;
    font-weight: bold;
    font-family: Arial, Helvetica, sans-serif;
