@@ -7,14 +7,16 @@
 </head>
 <body onload="init()">
     <div class="draw">  
-        <canvas id="cnv" onclick="init()"></canvas>
+        <canvas id="cnv" onclick="checkInput()"></canvas>
     </div>
     <div style="text-align: center; margin-top: 3vh;">
         <button disabled onclick="speedDown()"><<</button>
         <button onclick="solve()"> SOLVE </button>
         <button disabled onclick="speedUp()">>></button>
         
-        <button style="margin-left: 20vh;" onclick="init()"> NEW </button>
+        <span disabled id="counter" style="width: 3%; margin-left: 10vh; margin-right: 10vh;">0</span>
+        
+        <button onclick="init()"> NEW </button>
         <input type="number" id="Nval" min="3" max="8" value="4" onchange="validateN(this.value)">
     </div>
 </body>
