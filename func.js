@@ -3,6 +3,7 @@ var csize, N;           // cell size in pixels; N size of board N*N
 var board = [];
 var zerow;              // empty cell row number
 var zercol;             // empty cell column number
+var moves;              // move counter
 
 document.addEventListener('contextmenu', event => event.preventDefault());
 
@@ -31,6 +32,7 @@ function init()
     ctx.textBaseline = "middle";
     
     csize -= 1;         // !!!! needed cause of context.translate
+    moves = 0;
     
     board = new Array(N*N);
     for (var i = N*N-2; i != -1; i--) board[i] = i+1;
@@ -92,6 +94,7 @@ function drawNumbers()
 function redraw()
 {
     drawNumbers();
+    document.getElementById("counter").innerHTML = moves;
 
     if (isSolved()) {
         alert("SOLVED!");
@@ -167,6 +170,12 @@ function solve()
 
 }
 
+// ++++++++++++++++++++++++++++++++++++++++++++++ I/O processing ++++++++++++++++++++++++++++++++++++++++++++++
+function checkInput()
+{
+    
+}
+
 function moveUp()
 {
     if (zerow == N-1) return;
@@ -174,6 +183,7 @@ function moveUp()
     zerow++;
     board[zerow*N + zercol] = 0;
 
+    moves++;
     redraw();
 }
 
@@ -184,6 +194,7 @@ function moveLeft()
     zercol++;
     board[zerow*N + zercol] = 0;
 
+    moves++;
     redraw();
 }
 
@@ -194,6 +205,7 @@ function moveDown()
     zerow--;
     board[zerow*N + zercol] = 0;
 
+    moves++;
     redraw();
 }
 
@@ -204,5 +216,6 @@ function moveRight()
     zercol--;
     board[zerow*N + zercol] = 0;
 
+    moves++;
     redraw();
 }
