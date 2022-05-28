@@ -32,9 +32,10 @@ function init()
     
     csize -= 1;         // !!!! needed cause of context.translate
     
+    board = new Array(N*N);
     for (var i = N*N-2; i != -1; i--) board[i] = i+1;
     board[N*N-1] = 0;
-
+    
     // draw new game
     drawBoard();
     do shuffleArray(board);
@@ -73,7 +74,7 @@ function drawNumbers()
             ctx.fillRect(row+1, col+1, csize-2, csize-2);
 
             ctx.fillStyle = 'blue';
-            ctx.font = "2.5vh Arial";
+            ctx.font = 15/N + "vh Arial";
             ctx.fillText(board[i], row+csize/2, col+csize/2);       // text must be at cell center
         }
     }
