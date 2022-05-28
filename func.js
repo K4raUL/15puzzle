@@ -33,6 +33,7 @@ function init()
     
     csize -= 1;         // !!!! needed cause of context.translate
     moves = 0;
+    document.getElementById("counter").innerHTML = 0;
     
     board = new Array(N*N);
     for (var i = N*N-2; i != -1; i--) board[i] = i+1;
