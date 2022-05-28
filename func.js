@@ -43,6 +43,15 @@ function init()
     drawNumbers();
 }
 
+function validateN(val)
+{
+    if (Number.isNaN(val)) document.getElementById("Nval").value = 4;
+    else {
+        if (val < 3) document.getElementById("Nval").value = 3;
+        else if(val > 8) document.getElementById("Nval").value = 8;
+    }
+}
+
 // ++++++++++++++++++++++++++++++++++++++++++++++ Drawing related ++++++++++++++++++++++++++++++++++++++++++++++
 
 function drawBoard()
